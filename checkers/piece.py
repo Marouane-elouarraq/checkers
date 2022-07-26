@@ -4,12 +4,13 @@ from .constants import GREY, RED, SQUARE_SIZE, CROWN
 class Piece:
     PADDING = 15
     OUTLINE = 2
+    
     def __init__(self, row, col, color):
         self.col = col
         self.row = row
         self.color = color
         self.king = False
-        self.direction = -1 if color == RED else 1
+        # self.direction = -1 if color == RED else 1
         self.x = 0
         self.y = 0
         self.calc_pos()
