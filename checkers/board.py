@@ -22,7 +22,7 @@ class Board:
         pieces = []
         for row in self.board:
             for piece in row:
-                if piece.color == color:
+                if piece != 0 and piece.color == color:
                     pieces.append(piece)
         return pieces
 

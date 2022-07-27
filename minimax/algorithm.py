@@ -6,6 +6,7 @@ WHITE = (255, 255, 255)
 
 def minimax(position, depth, max_player, game):
     if depth == 0 or position.winner() != None:
+    # if depth == 0:
         return position.evaluate(), position
     if max_player:
         maxEval = float('-inf')
@@ -43,5 +44,5 @@ def get_all_moves(board, color, game):
             temp_board = deepcopy(board)
             temp_piece = temp_board.get_piece(piece.row, piece.col)
             new_board = simulate_move(temp_piece, move, temp_board, game, skip)
-            moves.append([new_board, piece])
+            moves.append(new_board)
     return moves
